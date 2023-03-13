@@ -1,13 +1,418 @@
+html {
+  font-family: sans-serif;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Arial";
+}
+ul {
+  /* max-width: 20rem; */
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+li {
+  margin: .5rem 0;
+  padding: 0.2em;
+  border-radius: 2px;
+  background: #f7f7f7;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.typescript-components table, 
+.typescript-components th, 
+.typescript-components td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  font-size:12px;
+}
+/*------- todo list 2------------------------*/
+/* .form-control-todo {
+  line-height: .8em;
+} */
+.list-item li:hover, .list-item li:active {
+  background: #f0f0f0;
+}
+/*------- pinvoice validation app ------------------------*/
+.error-summary {
+  line-height: 1.2em;
+  font-size: 12px;
+  font-weight: normal;;
+}
+/*------- payment manage tool ------------------------*/
+.payment-manage-tool{
+  border-top-left-radius: 8px;
+  border: 1px solid #000;
+  margin-top: 4em;
+  padding: 4em 4em 0;
+  border-bottom-left-radius: 8px;
+  background:#fafafa;
+}
+.payment-manage-ttl{	
+  margin: 2em 2.6em 1em;	
+  font-size: 24px;	
+}	
+.payment-manage-view{	
+  background: #f0f0f0;	
+  margin: 0 4em;	
+  padding: 2em;	
+}
+.payment-manage-tool-ttl{
+  color:#00338d;
+  font-size: 20px;
+}
+.activePayment { 
+  min-height: 20px;
+  list-style: none;
+  margin: 0 8px;
+  max-width: auto!important;
+}
+.finishedPayment { 
+  min-height: 40px;
+  list-style: none;
+  margin: 0 8px;
+  
+}
+ul.activePayment {
+  max-width: auto!important;
+}
+.activePayment li{  
+  border: 1px solid #6c757d; 
+  padding: 0.7em 1rem;
+  margin: 0.5rem 0;
+  border-radius: 2px;
+}
+.activePayment li:hover,
+.activePayment li:active{  
+  background:#f0f0f0;
+}
+.activePayment p,
+.finishedPayment p{  
+  font-size: 12px;
+  line-height: 1.2em;
+  margin-bottom: 0;
+}
+.finishedPayment li{  
+  border: 1px solid #6c757d;  
+  background: rgba(0, 51, 141, 0.4);
+  padding: 0.7em 1rem;
+  margin: 0.5rem 0;
+  border-radius: 2px;
+} 
+.finishedPayment li:hover,
+.finishedPayment li:active{ 
+  background: rgb(0 51 141 / 63%)
+} 
+.payment-manage-view table,
+.payment-manage-tool table,
+.activePayment table,
+.finishedPayment table{  
+  width: 100%;
+}
+.activePayment-ttl,
+.finishedPayment-ttl
+{
+  border-bottom: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+}
+.activePayment-ttl h4,
+.finishedPayment-ttl h4
+{
+  font-size: 14px!important;
+  margin: 0;
+  font-family: sans-serif;
+}
+.activePayment-ttl div,
+.finishedPayment-ttl div
+{
+  vertical-align: bottom;
+  line-height: 1em;
+}
+.payment-amount-label{
+  text-align:right;
+}
+.btn-property-m {
+  font-size: 12px;
+  font-weight: bold;
+  width: 120px;
+  height: 32px;
+}
+.subButton{	
+  color: black!important;	
+  background: #fff!important;	
+  padding-left: 0px!important;	
+}	
+.subButton:hover,	
+.subButton:active{	
+  color: black!important;	
+  background: #f0f0f0!important;	
+}	
+.payment-data-subButton {	
+  margin: 0.5em 4em!important;	
+}
+/*------- number input field ------------------------*/
+input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+  }
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+  label, input {
+    display: block;
+    width: 100%;
+    font-size: 12px;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #50005a;
+  }
+  input.currency-input{
+    text-align: right;
+  }
+  
+  button {
+    background: #50005a;
+    border: 1px solid #50005a;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  button:hover,
+  button:active {
+    background: #6a0a77;
+    border-color: #6a0a77;
+  }
+
+form {
+    width: 90%;
+    max-width: 40rem;
+    text-align: left;
+  }
+  .cms-document-info-container{
+    background: #fafafa;
+    padding: 2em 2em 0 2em;
+    margin-bottom: 4em;
+    border: solid 1px #878787;
+  }
+  .form-control-cms{
+    display: block;
+    width: 100%;
+    padding: 0.375rem;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    appearance: none;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+  .form-control-cms-container,
+  .form-control-cms-container:focus-visible {
+    border: 1px solid #ced4da;
+  }
+  .form-control-cms-container-error,
+  .form-control-cms-container-error:focus-visible {
+    border: 1px solid #bc204b;
+  }
+  .form-control.is-invalid{
+    background-image: none
+  }
+  .form-control-cms-error-txt {
+    color: #bc204b;
+    font-size: 12px;
+  }
+  .form-control-cms-info {
+    font-size: 12px;
+    width: fit-content;
+    color: #41464ba1;
+    display: flex;
+  }
+  .form-control-cms-limit {
+    font-size: 12px;
+    color: #41464ba1;
+    line-height: 1.1em;
+  }
+  .form-control-todo {
+    margin-bottom: 1rem;
+    max-width: 20em;
+  }
+  .payment-info-ttl {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .payment-info-add{
+    border: none;
+  }
+  
+  .cms-btn-property-m {
+    font-size: 12px;
+    font-weight: bold;
+    width: 120px;
+    height: 32px;
+  }
+  .cms-btn-property-s {
+    font-size: 12px;
+    font-weight: bold;
+    height: 32px;
+  }
+  .bin-button {
+    background: none;
+    border:none;
+    color: #fff;
+  }
+  .bin-button:hover,
+  .bin-button:active{
+    color: #fff;
+    background: none;
+  }
+ 
+  .KPMGprimary{
+    background-color: #00338d!important;
+    border: #00338d solid 1px !important;
+    margin: 0 4px;
+  }
+  .KPMGprimary:hover,
+  .KPMGprimary:active{
+    background-color: #02235c!important;
+    border: #00338d solid 1px !important;
+  }
+  .KPMGprimary:focus{
+    box-shadow: none!important;
+  }
+
+  .KPMGsecondary{
+    background-color: #bc204b!important;
+    border: #bc204b solid 1px !important;
+  }
+  .KPMGsecondary:hover,
+  .KPMGsecondary:active{
+    background-color: #931437!important;
+    border: #931437 solid 1px !important;
+  } 
+  .sub-btn {    
+    color: #6c757d;
+    background: none;
+    border: 1px solid #6c757d7d;
+  }
+  .sub-btn:hover,
+  .sub-btn:active {    
+    color: #6c757d;
+    background: #6c757d24;
+    border: 1px solid #6c757d7d;
+  }
+
+  .icon-btn > svg{
+    font-size: 17px;
+  }
+  .icon-btn{
+    color: #000;
+    background:none;
+    padding: 0 0.2em;
+    border:none;
+    width: auto;
+  }
+  .delete-btn{
+    color: #000;
+    background:none;
+    padding: 0 0.5em;
+    border:none;
+  }
+  .icon-btn:hover,
+  .icon-btn:active{
+    background: #6c757d24;
+    padding: 0 0.2em;
+    border-radius:50%;
+  }
+  .delete-btn:hover,
+  .delete-btn:active {
+    background: #6c757d24;
+    padding: 0 0.5em;
+    border-radius:50%;
+  }
+  .container-error{
+    border: 1px solid black;
+    background: white;
+    padding: 0.5em;
+    margin: 0.1rem 0 1em;
+    font-weight: bold;
+  }
+  .icon-warning{
+    filter: invert(60%) sepia(96%) saturate(487%) hue-rotate(3deg) brightness(94%) contrast(104%);
+    width: 30px;
+    height: 30px;
+  }
+  .icon-error {
+    color: #bc204b!important;
+    width: 30px!important;
+    height: 30px!important;
+    padding: 0px!important;
+    vertical-align: top!important;
+    margin: 0 0.5em 0 0!important;
+  }
+  .icon-info {
+    text-align: right;
+    vertical-align: bottom;
+    align-self: flex-end;
+    font-size: 17px;
+  }
+  .icon-info:hover,
+  .icon-info:active {
+    color:#6c757d;
+  }
+  .container-item-registered{
+    background: #6c757d;
+    margin: 0.5em 0 0;
+  }
+  label.item-registered{
+    font-size: 14px;
+    color: #fff;
+  }
+/*------- task manager app ------------------------*/
+.modal-header-bar{
+  box-shadow: none;
+  background: #01328e;
+}
+/* .container { display: flex;
+  flex-direction: row;} */
+
+.company-member-name-ttl,
+.company-member-ttl{
+  font-family: KPMGLight;
+  font-size: 48px;
+}
+.card-media-image {
+  height: 150px;
+  background-size: cotain !important;
+  margin-bottom: 20px;
+  width: 140px;
+  text-align: center;
+  margin: auto;
+  border: solid #fff 10px;
+}
+.item-view-card {
+  padding: 20px;
+  width: 300px;
+}
+.item-details-ttl-container{
+  position: inherit!important;
+  padding-right: 0!important;
+}
+.item-details-ttl {
+  text-align: center;
+  margin: auto;
+}
+.item-modal-detail-txt {
+  word-wrap: break-word;
 }

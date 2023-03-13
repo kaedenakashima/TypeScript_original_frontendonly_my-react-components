@@ -1,0 +1,23 @@
+.todo-title{
+    font-size: 1.5em!important;
+    border-bottom: 1px solid #b9b6b6;
+}
+.todo-label {
+    margin-bottom: 0;
+}
+.todo-textinput{
+    width: 20em;   
+}
+.todo-select{
+    font-size:14px;
+    margin-bottom:10px;
+}
+.todo-output{
+    font-size: 12px;
+    display: contents;
+    justify-content: space-between;
+    align-items: inherit;
+}
+.todo-input-wrapper{
+    width: 80%;
+}    
