@@ -1,0 +1,48 @@
+/* ValidationInput1 */
+body{
+    font-family: sans-serif;
+}
+.validation-input1 .input-item {
+    display: flex;
+    flex-direction: column;
+    width:400px;
+    margin: 20px;
+}
+.input-item span{
+    color: red;
+    display: none;
+    font-size:12px;
+    padding-top: 4px;
+}
+.validation-input1 .input-item input:invalid[focused="true"] {
+    border: 1px solid red;
+}
+.validation-input1 .input-item input:invalid[focused="true"] ~ span {
+    display: block;
+}
+.txt-ex {
+    padding: 8px 16px;
+    background: #57b3dd26;
+    font-size: 12px;
+}
+/* ValidationInput2 */
+.validation-sample-w{
+    width:350px;
+}
+.input-item2 input {
+    width:300px;
+}
+.input-item2 label, .input-item2 button{
+    display:block;
+}
+.input-item2 span{
+    color: red;
+    display:block;
+    font-size:12px;
+} 
+.input-item2 .sub-txt{
+    color: black;
+    display:block;
+    font-size:12px;
+} 
+

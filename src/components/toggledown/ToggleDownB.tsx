@@ -12,7 +12,7 @@ export class ToggleDownB extends React.Component<{}, IMore> {
     render() {
         return (
             <div>
-                 <h4 className='todo-title'>Toggle with Class Component1</h4>
+                 <h4 className='f-12'>Toggle with Class Component1</h4>
                 <div className="ml-0 mt-1 icon-btn" style={{width: "fit-content", cursor: "default"}} onClick={() => this.setState({more: !this.state.more})}>
                 {this.state.more ? 'x':'+'}
                 </div>

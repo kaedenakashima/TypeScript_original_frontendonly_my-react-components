@@ -1,8 +1,8 @@
 .todo-multipleaddB table {
     width:100%;
 }
-.todo-title{
-    font-size:2.5em!important;
+.f-12{
+  font-size: 12px;
 }
 .todo-label {
     margin-bottom: 0;

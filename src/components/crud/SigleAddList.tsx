@@ -1,5 +1,4 @@
 import React, { Fragment, useState, useRef } from "react";
-import { Button } from "reactstrap";
 import EditIcon from "@mui/icons-material/Edit";
 
 interface IItem {
@@ -61,17 +60,19 @@ const AddItem: React.FC<TAddProps> = (props) => {
     props.add1(textInputRef.current!.value);
   };
   return (
+    <>
+        <h4 className="f-12">Add Sigle Text Item</h4>
     <form onSubmit={onSubmit2Add}>
       <div className="form-control-todo">
-        <h4 className="todo-title">Add Sigle Text Item</h4>
         <div className="d-flex">
           <input type="text" id="todo-text" ref={textInputRef} />
-          <Button className="KPMGprimary rounded-0" size="md" type="submit">
+          <button className="icon-btn ml-1" type="submit">
             +
-          </Button>
+          </button>
         </div>
       </div>
     </form>
+    </>
   );
 };
 export const SingleAddList: React.FC = () => {

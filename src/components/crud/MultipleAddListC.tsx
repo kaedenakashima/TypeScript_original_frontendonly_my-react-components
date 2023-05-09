@@ -217,9 +217,9 @@ export const MultipleAddListC = () => {
     setDataUpdateId(null);
   }
   return (
-    <section className="todo-multipleaddB">
-      <h4 className="todo-title">CRUD In The List</h4>
-      <table>
+    <section className="todo-multipleaddB mt-4">
+      <h4 className="f-12">CRUD In The List</h4>
+      <table className="myTable">
         <thead>
           <tr>
             <th>Full Name</th>

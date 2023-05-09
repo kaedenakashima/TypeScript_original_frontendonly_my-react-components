@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useRef } from "react";
-import { Button, Col, Row } from "reactstrap";
+import { Col, Row } from "reactstrap";
 import EditIcon from "@mui/icons-material/Edit";
 interface IItem {
   id: string;
@@ -136,11 +136,11 @@ const AddItem: React.FC<TAddProps> = (props) => {
   };
   return (
     <>
-      <h4 className="todo-title">Add Multiple Text Items</h4>
+      <h4 className="f-12">Add Multiple Text Items</h4>
       <form onSubmit={add2}>
         <div className="form-control-todo">
           <Row>
-            <Col>
+            <Col className='d-inline-flex mb-1'>
               <label className="todo-label" htmlFor="todo-text">
                 Text
               </label>
@@ -148,7 +148,7 @@ const AddItem: React.FC<TAddProps> = (props) => {
             </Col>
           </Row>
           <Row>
-            <Col>
+            <Col className='d-inline-flex mb-1'>
               <label className="todo-label" htmlFor="todo-text2">
                 Text2
               </label>
@@ -161,7 +161,7 @@ const AddItem: React.FC<TAddProps> = (props) => {
             </Col>
           </Row>
           <Row>
-            <Col>
+            <Col className='d-inline-flex mb-1'>
               <label className="todo-label" htmlFor="todo-unit">
                 Unit(number only)
               </label>
@@ -176,7 +176,7 @@ const AddItem: React.FC<TAddProps> = (props) => {
             </Col>
           </Row>
           <Row>
-            <Col>
+            <Col className='d-inline-flex'>
               <label className="todo-label" htmlFor="todo-select">
                 Select
               </label>
@@ -192,13 +192,14 @@ const AddItem: React.FC<TAddProps> = (props) => {
               </select>
             </Col>
           </Row>
-          <Button
-            className="KPMGprimary rounded-0 ml-0"
-            size="md"
+          <div className='text-right'>
+          <button
+            className='icon-btn'
             type="submit"
           >
             +
-          </Button>
+          </button>
+          </div>
         </div>
       </form>
     </>

@@ -1,5 +1,4 @@
 import {useState, useEffect} from 'react'
-import {Button} from 'reactstrap'
 import EditIcon from '@mui/icons-material/Edit'
 import ZoomInIcon from '@mui/icons-material/ZoomIn';
 interface IItem {
@@ -163,7 +162,7 @@ const ItemList = (props:TListProps) => {
     const onClose2Modal = () => setShowModal(false)
     return (
     <>
-    <table>
+    <table className="myTable">
         <tr>
             <th>Name</th>
             <th>Email</th>
@@ -231,7 +230,7 @@ export const MultipleAddListB = () => {
     }
     return (
     <section className='todo-multipleaddB'>
-    <h4 className='todo-title'>CRUD with switching display</h4>
+    <h4 className='f-12'>CRUD with switching display</h4>
      {shownPage === EPage.list2 && (
         <>
         <button className='ml-0 mt-1 float-right icon-btn' type='submit' onClick={onClick2Add}>+</button>

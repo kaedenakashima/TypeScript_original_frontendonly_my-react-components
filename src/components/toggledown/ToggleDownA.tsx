@@ -25,7 +25,7 @@ export const ToggleDownA = () => {
     }
     return (
     <section>
-        <h4 className='todo-title'>Toggle with Function Component</h4>
+        <h4 className='f-12'>Toggle with Function Component</h4>
      {shownContents === EContents.beforeClick && (
         <>
         <input type='button' className="ml-0 mt-1 icon-btn" value='+' onClick={onClick2More} />

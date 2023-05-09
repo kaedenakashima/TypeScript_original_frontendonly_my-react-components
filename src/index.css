@@ -1,12 +1,11 @@
 html {
-  font-family: sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 body {
   margin: 0;
-  font-family: "Arial";
 }
 ul {
-  /* max-width: 20rem; */
   padding: 0;
 }
 
@@ -25,7 +24,38 @@ li {
   border: 1px solid black;
   border-collapse: collapse;
   font-size:12px;
+
 }
+/*------- General------------------------*/
+.icon-btn > svg{
+  font-size: 17px;
+}
+.icon-btn{
+  color: #000;
+  background:none;
+  padding: 0 0.2em;
+  border:none;
+  width: auto;
+}
+.delete-btn{
+  color: #000;
+  background:none;
+  padding: 0 0.5em;
+  border:none;
+}
+.icon-btn:hover,
+.icon-btn:active{
+  background: #6c757d24;
+  padding: 0 0.2em;
+  border-radius:50%;
+}
+.delete-btn:hover,
+.delete-btn:active {
+  background: #6c757d24;
+  padding: 0 0.5em;
+  border-radius:50%;
+}
+
 /*------- todo list 2------------------------*/
 /* .form-control-todo {
   line-height: .8em;
@@ -168,17 +198,12 @@ input[type=number]::-webkit-inner-spin-button,
   
   input:focus {
     outline: none;
-    border-color: #50005a;
   }
   input.currency-input{
     text-align: right;
   }
   
   button {
-    background: #50005a;
-    border: 1px solid #50005a;
-    color: white;
-    padding: 0.5rem 1.5rem;
     cursor: pointer;
     font-size: 12px;
   }
@@ -189,8 +214,7 @@ input[type=number]::-webkit-inner-spin-button,
   
   button:hover,
   button:active {
-    background: #6a0a77;
-    border-color: #6a0a77;
+    background: #f0f0f0;
   }
 
 form {
@@ -277,30 +301,6 @@ form {
     color: #fff;
     background: none;
   }
- 
-  .KPMGprimary{
-    background-color: #00338d!important;
-    border: #00338d solid 1px !important;
-    margin: 0 4px;
-  }
-  .KPMGprimary:hover,
-  .KPMGprimary:active{
-    background-color: #02235c!important;
-    border: #00338d solid 1px !important;
-  }
-  .KPMGprimary:focus{
-    box-shadow: none!important;
-  }
-
-  .KPMGsecondary{
-    background-color: #bc204b!important;
-    border: #bc204b solid 1px !important;
-  }
-  .KPMGsecondary:hover,
-  .KPMGsecondary:active{
-    background-color: #931437!important;
-    border: #931437 solid 1px !important;
-  } 
   .sub-btn {    
     color: #6c757d;
     background: none;
@@ -313,34 +313,7 @@ form {
     border: 1px solid #6c757d7d;
   }
 
-  .icon-btn > svg{
-    font-size: 17px;
-  }
-  .icon-btn{
-    color: #000;
-    background:none;
-    padding: 0 0.2em;
-    border:none;
-    width: auto;
-  }
-  .delete-btn{
-    color: #000;
-    background:none;
-    padding: 0 0.5em;
-    border:none;
-  }
-  .icon-btn:hover,
-  .icon-btn:active{
-    background: #6c757d24;
-    padding: 0 0.2em;
-    border-radius:50%;
-  }
-  .delete-btn:hover,
-  .delete-btn:active {
-    background: #6c757d24;
-    padding: 0 0.5em;
-    border-radius:50%;
-  }
+
   .container-error{
     border: 1px solid black;
     background: white;
@@ -389,7 +362,6 @@ form {
 
 .company-member-name-ttl,
 .company-member-ttl{
-  font-family: KPMGLight;
   font-size: 48px;
 }
 .card-media-image {

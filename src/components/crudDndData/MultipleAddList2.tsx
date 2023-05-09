@@ -3,7 +3,7 @@ import {
   useState,
   useRef
 } from "react";
-import { Button, Col, Row } from "reactstrap";
+import { Col, Row } from "reactstrap";
 import EditIcon from "@mui/icons-material/Edit";
 interface IItem {
   id: string;
@@ -193,7 +193,7 @@ export function MultipleAddList2() {
   }
   return (
     <div>
-      <h4 className="todo-title">
+      <h4 className="f-12">
         Add Multiple Text list1 + dnd, existed data
       </h4>
       <div className="input-group">
@@ -201,7 +201,7 @@ export function MultipleAddList2() {
           <Col className="m-auto">
             <div className="newItem-control-todo">
               <Row>
-                <Col>
+                <Col className='d-inline-flex mb-1'>
                   <label className="todo-label" htmlFor="todo-text">
                     Text
                   </label>
@@ -214,7 +214,7 @@ export function MultipleAddList2() {
                 </Col>
               </Row>
               <Row>
-                <Col>
+                <Col className='d-inline-flex mb-1'>
                   <label className="todo-label" htmlFor="todo-text2">
                     Text2
                   </label>
@@ -226,7 +226,7 @@ export function MultipleAddList2() {
                 </Col>
               </Row>
               <Row>
-                <Col>
+                <Col className='d-inline-flex mb-1'>
                   <label className="todo-label" htmlFor="todo-unit">
                     Unit(number only)
                   </label>
@@ -238,7 +238,7 @@ export function MultipleAddList2() {
                 </Col>
               </Row>
               <Row>
-                <Col>
+                <Col className='d-inline-flex mb-1'>
                   <label className="todo-label" htmlFor="todo-select">
                     Status
                   </label>
@@ -255,13 +255,14 @@ export function MultipleAddList2() {
                 </Col>
               </Row>
             </div>
-            <Button
-              className="KPMGprimary rounded-0 ml-0"
-              size="md"
+            <div className='text-right'>
+            <button
+              className="icon-btn"
               onClick={addItem}
             >
               +
-            </Button>
+            </button>
+            </div>
           </Col>
         </Row>
       </div>
@@ -295,7 +296,7 @@ export function MultipleAddList2() {
                       <br />
                       <span>status: {x.status}</span>
                     </div>
-                    <div>
+                    <div className='text-right'>
                       <button
                         className="icon-btn"
                         onClick={(e: any) => onClick2Update(e, x)}

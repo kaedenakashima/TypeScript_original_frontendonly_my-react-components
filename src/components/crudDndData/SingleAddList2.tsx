@@ -1,5 +1,4 @@
 import {Fragment, useState, useRef} from 'react'
-import {Button} from 'reactstrap'
 import EditIcon from '@mui/icons-material/Edit'
 
 interface IItem {
@@ -120,15 +119,14 @@ export function SingleAddList2() {
   }
   return (
     <div>
+      <h4 className='f-12'>Add Sigle Text Item + dnd, existed data</h4>
       <div className="input-group">
-      <h4 className='todo-title'>Add Sigle Text Item + dnd, existed data</h4>
-      **if item has same contents, it will be deleted at the same time.
         <div className='d-flex'>
             <input type="text" id="todo-text"
                     name="text" onChange={(e) => setText(e.target.value)} />
-            <Button type="submit" className="KPMGprimary rounded-0" size="md" onClick={onClick2Add}>
+            <button type="submit" className="icon-btn ml-1" onClick={onClick2Add}>
               +
-            </Button>
+            </button>
         </div>
       </div>
       <div className="list-container">
